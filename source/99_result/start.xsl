@@ -20,7 +20,7 @@
 <xsl:template match="digest/entry" mode="digest">
 	<li>
 		<em>»</em>
-		<a href="{@handle}/index.html">
+		<a href="{@handle}/">
 			<strong><xsl:value-of select="title"/></strong>
 			<p>
 				<xsl:apply-templates select="digest/node()" mode="xhtml"/>

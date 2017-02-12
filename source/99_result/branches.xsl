@@ -54,7 +54,7 @@
 <xsl:template match="entry/*/node">
 	<li>
 		<em>»</em>
-		<a href="{@name}/index.html">
+		<a href="{@name}/">
 			<strong><xsl:value-of select="title"/></strong>
 			<p>
 				<xsl:apply-templates select="digest/node()" mode="xhtml"/>

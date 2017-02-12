@@ -59,7 +59,7 @@
 	</div>
 
 	<div id="footer" class="center border_top">
-		<a href="/projects/xslt/static_xslt/">Made with XSLT</a>
+		<a href="/projects/xslt/">Made with XSLT</a>
 
 		<ul class="buttonlist">
 			<li>

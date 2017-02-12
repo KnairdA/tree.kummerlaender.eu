@@ -12,6 +12,7 @@
 
 <xsl:variable name="meta">
 	<datasource type="main"    mode="iterate" source="02_data/branches.xml" target="branch"/>
+	<datasource type="support" mode="full"    source="02_data/digest.xml"   target="digest"/>
 	<datasource type="support" mode="full"    source="03_meta/meta.xml"     target="meta"/>
 	<target     mode="xpath"   value="concat($datasource/branch/entry/@handle, '/index.html')"/>
 </xsl:variable>
@@ -35,7 +36,7 @@
 
 	<div class="columns">
 		<ul class="prettylist">
-			<xsl:apply-templates select="branches/node">
+			<xsl:apply-templates select="digest/node">
 				<xsl:sort select="digest/@size" data-type="number" order="descending"/>
 			</xsl:apply-templates>
 

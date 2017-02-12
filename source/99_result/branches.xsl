@@ -36,10 +36,14 @@
 
 	<div class="columns">
 		<ul class="prettylist">
-			<xsl:apply-templates select="digest/node">
+			<xsl:apply-templates select="branches/node">
 				<xsl:sort select="digest/@size" data-type="number" order="descending"/>
 			</xsl:apply-templates>
+		</ul>
+	</div>
 
+	<div class="columns">
+		<ul class="prettylist">
 			<xsl:apply-templates select="leaves/node">
 				<xsl:sort select="digest/@size" data-type="number" order="descending"/>
 			</xsl:apply-templates>

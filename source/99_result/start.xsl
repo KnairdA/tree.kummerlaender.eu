@@ -15,7 +15,7 @@
 	<target     mode="plain"   value="index.html"/>
 </xsl:variable>
 
-<xsl:template name="title-text">Start</xsl:template>
+<xsl:template name="title-text">/</xsl:template>
 
 <xsl:template match="digest/entry" mode="digest">
 	<li>

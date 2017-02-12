@@ -51,7 +51,7 @@ code{font-family:monospace;margin:0 .1em;padding:0 .5em;border:.1em solid #e3e8e
 .buttonlist li{float:left;background:#e3e8e8;border-radius:.3em;padding:.2em;margin:0 0 .2em .2em}
 .buttonlist li a{text-decoration:none;color:#272828;}
 .buttonlist li a:hover{text-decoration:underline}
-.prettylist li{display:inline-block;padding:.5em 0}
+.prettylist li{display:block;padding:.5em 0;column-break-inside:avoid;-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;overflow:hidden}
 .prettylist li a{margin-left:.2em;color:#272828;text-decoration:none}
 .prettylist li a:hover{text-decoration:underline}
 .prettylist li p{margin:0 !important}

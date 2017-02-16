@@ -54,9 +54,9 @@ code{font-family:monospace;margin:0 .1em;padding:0 .5em;border:.1em solid #e3e8e
 .prettylist li{display:block;padding:.5em 0;column-break-inside:avoid;-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;overflow:hidden}
 .prettylist li a{margin-left:.2em;color:#272828;text-decoration:none}
 .prettylist li a:hover{text-decoration:underline}
-.prettylist li p{margin:0 !important}
 .prettylist li em{font-style:normal;font-size:1.4em;color:#F80}
-.prettylist li p em{font-style:italic;color:#272828;font-size:1em}
+.prettylist li span {display:block;line-height:1.75em;text-align:justify}
+.prettylist li span em{font-style:italic;color:#272828;font-size:1em}
 .menuhead{border-bottom:0.1em solid #e3e8e8;overflow:hidden;padding:0;margin-top:0.8em}
 .menuhead h3{float:left;padding:0.4em 0 0 0;margin:0 !important;border:none !important}
 .menuhead ul{float:right;padding:0;font-size:1.1em}

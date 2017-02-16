@@ -56,9 +56,9 @@
 		<em>»</em>
 		<a href="{@name}/">
 			<strong><xsl:value-of select="title"/></strong>
-			<p>
+			<span>
 				<xsl:apply-templates select="digest/node()" mode="xhtml"/>
-			</p>
+			</span>
 		</a>
 	</li>
 </xsl:template>

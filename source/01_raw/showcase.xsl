@@ -8,7 +8,7 @@
 
 <xsl:variable name="meta">
 	<datasource type="main"    mode="xpath" source="$source_tree/directory[@name = '00_content']/directory[@name = 'showcase']/file"  target="links"/>
-	<datasource type="support" mode="xpath" source="$source_tree/directory[@name = '00_content']/directory[@name = 'tree']/directory" target="files"/>
+	<datasource type="support" mode="xpath" source="$source_tree/directory[@name = '00_content']/directory[@name = 'tree']/*" target="files"/>
 	<target     mode="plain"   value="showcase.xml"/>
 </xsl:variable>
 

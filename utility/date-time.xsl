@@ -3,6 +3,8 @@
 
 <!--
 
+Source: https://www.getsymphony.com/download/xslt-utilities/view/20506/
+
 Description:
 
 This is a date formatting utility. The named template "format-date" takes 2 parameters:

@@ -42,15 +42,7 @@
 		</h1>
 
 		<ul class="buttonlist">
-			<li>
-				<a href="/">Start</a>
-			</li>
-			<li>
-				<a href="/projects">Projects</a>
-			</li>
-			<li>
-				<a href="/contact">Contact</a>
-			</li>
+			<xsl:apply-templates select="$root/meta/header/navigation/link" mode="master"/>
 		</ul>
 	</div>
 
@@ -59,16 +51,24 @@
 	</div>
 
 	<div id="footer" class="center border_top">
-		<a href="/projects/xslt/">Made with XSLT</a>
+		<a href="{$root/meta/footer/info/@href}">
+			<xsl:value-of select="$root/meta/footer/info/text()"/>
+		</a>
 
 		<ul class="buttonlist">
-			<li>
-				<a href="/contact">Contact</a>
-			</li>
+			<xsl:apply-templates select="$root/meta/footer/navigation/link" mode="master"/>
 		</ul>
 	</div>
 </body>
 </html>
+</xsl:template>
+
+<xsl:template match="link" mode="master">
+	<li>
+		<a href="{@href}">
+			<xsl:value-of select="text()"/>
+		</a>
+	</li>
 </xsl:template>
 
 <xsl:template match="text()|@*"/>

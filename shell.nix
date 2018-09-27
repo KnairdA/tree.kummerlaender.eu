@@ -1,20 +1,20 @@
-with import <nixpkgs> {};
+{ system ? builtins.currentSystem }:
 
-stdenv.mkDerivation rec {
-  name = "env";
-  env = buildEnv { name = name; paths = buildInputs; };
+let
+  pkgs    = import <nixpkgs> { inherit system; };
+  mypkgs  = import (fetchTarball "https://pkgs.kummerlaender.eu/nixexprs.tar.gz") { };
 
-  buildInputs = let
-    InputXSLT = pkgs.callPackage ./pkgs/InputXSLT.nix {};
-    KaTeX     = pkgs.callPackage ./pkgs/KaTeX.nix {};
-    generate  = pkgs.callPackage ./pkgs/generate.nix {};
-    preview   = pkgs.callPackage ./pkgs/preview.nix {};
-  in [
-    generate
-    preview
-    InputXSLT
-    pandoc
-    KaTeX
-    highlight
+in pkgs.stdenv.mkDerivation rec {
+  name = "tree.kummerlaender.eu";
+
+  buildInputs = [
+    pkgs.pandoc
+    pkgs.highlight
+    mypkgs.katex-wrapper
+    mypkgs.make-xslt
   ];
+
+  shellHook = ''
+    export NIX_SHELL_NAME="${name}"
+  '';
 }

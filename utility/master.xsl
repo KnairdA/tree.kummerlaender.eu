@@ -25,7 +25,7 @@
 	<meta name="viewport"           content="width=device-width,initial-scale=1.0"/>
 
 	<link rel="stylesheet"    type="text/css"             href="/main.css" />
-	<link rel="shortcut icon" type="image/x-icon"         href="/media/favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon"         href="/favicon.ico" />
 
 	<xsl:if test="//*[(self::p or self::span) and @class = 'math']">
 		<link rel="stylesheet" type="text/css" href="https://static.kummerlaender.eu/katex/katex.min.css" />

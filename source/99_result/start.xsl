@@ -34,10 +34,10 @@
 
 <xsl:template match="digest/entry" mode="digest">
 	<li>
-		<em>»</em>
+		<span class="arrow">»</span>
 		<a href="{@handle}/">
-			<strong><xsl:value-of select="title"/></strong>
-			<span>
+			<span class="title"><xsl:value-of select="title"/></span>
+			<span class="text">
 				<xsl:apply-templates select="digest/node()" mode="xhtml"/>
 			</span>
 		</a>

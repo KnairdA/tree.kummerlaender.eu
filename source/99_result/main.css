@@ -1,7 +1,10 @@
-body{margin:0;padding:0;font:1em sans-serif;color:#272828;word-wrap:break-word}
+@font-face{font-family:'Vollkorn';font-style:normal;src:local('Vollkorn Regular'), local('Vollkorn-Regular'), url(https://static.kummerlaender.eu/font/Vollkorn-Regular.woff2) format('woff2'), url(https://static.kummerlaender.eu/font/Vollkorn-Regular.woff) format('woff'), url(https://static.kummerlaender.eu/font/Vollkorn-Regular.ttf) format('truetype')}
+@font-face{font-family:'Vollkorn';font-style:italic;src:local('Vollkorn Italic'), local('Vollkorn-Italic'), url(https://static.kummerlaender.eu/font/Vollkorn-Italic.woff2) format('woff2'), url(https://static.kummerlaender.eu/font/Vollkorn-Italic.woff) format('woff'), url(https://static.kummerlaender.eu/font/Vollkorn-Italic.ttf) format('truetype')}
+@font-face{font-family:'Oswald Regular';font-style:normal;src:local('Oswald Regular'), url(https://static.kummerlaender.eu/font/Oswald-Regular.woff2) format('woff2'), url(https://static.kummerlaender.eu/font/Oswald-Regular.woff) format('woff'), url(https://static.kummerlaender.eu/font/Oswald-Regular.ttf) format('truetype')}
+body{margin:0;padding:0;font-size:1.1em;font-family:'Vollkorn',sans-serif;color:#272828;word-wrap:break-word}
 a, a:visited{text-decoration:underline;color:#272828}
 a:hover{color:black}
-h1, h2{margin:0;color:#272828;font-weight:bold}
+h1, h2{font-family:'Oswald Regular',sans-serif;margin:0;color:#272828;font-weight:bold}
 h1 a, h2 a{text-decoration:none}
 p{margin:0 0 .5em 0;text-align:justify;line-height:1.75em}
 ul{margin:0;padding:0;list-style:none}
@@ -14,14 +17,14 @@ sub{vertical-align:baseline;position:relative;top:0.4em}
 .center{width:45em;margin:0 auto;overflow:hidden}
 .border_bottom{border-bottom:.3em solid #e3e8e8}
 .border_top{border-top:.3em solid #e3e8e8}
-#navigation{padding:2em 0 0 0}
+#navigation{font-family:'Oswald Regular',sans-serif;padding:2em 0 0 0}
 #navigation h1{font-size:1.1em;line-height:1.5em;font-weight:bold;float:left;padding:0 .2em 0 0;margin:0}
 #navigation ul{float:right;font-size:1.1em}
 #content p{margin-bottom:.7em;text-align:justify}
 #content h2{font-size:1.4em;margin:0;color:#F80}
 #content h2 a, h2 span{font-size:.8em;text-decoration:none !important;color:#272828;font-weight:normal;display:inline-block;vertical-align:middle;max-width:95%}
 #content h2 a:hover{text-decoration:underline !important}
-#content h3, #content h4{font-size:1.05em;font-weight:normal;padding-bottom:.2em;margin:.8em 0 .5em 0;border-bottom:.1em solid #e3e8e8}
+#content h3, #content h4{font-size:1.05em;font-family:'Oswald Regular',sans-serif;font-weight:normal;padding-bottom:.2em;margin:.8em 0 .5em 0;border-bottom:.1em solid #e3e8e8}
 #content .article{border-bottom:.3em dotted #e3e8e8;padding-bottom:.5em;margin-top:1em;text-align:justify}
 #content .article:last-child{border:none}
 #content .article a{text-decoration:underline;color:#272828}
@@ -29,9 +32,6 @@ sub{vertical-align:baseline;position:relative;top:0.4em}
 #content .article ul{float:none;margin-left:2em;text-align:left;margin-bottom:0.7em}
 #content .article ul li{list-style-type:circle;float:none}
 #content .article ul li a{background:0}
-#content .article .info{font-size:.9em;margin-bottom:.5em;margin-left:1.4em}
-#content .article .info a{text-decoration:none;color:#272828}
-#content .article .info a:hover{text-decoration:underline}
 #content .article table{border-collapse:collapse;border-left:.4em solid #e3e8e8;margin:1em}
 #content .article table thead{border-bottom:.1em solid #272828}
 #content .article table tr{border-bottom:.1em solid #272828}
@@ -43,7 +43,7 @@ sub{vertical-align:baseline;position:relative;top:0.4em}
 #content img.clear{border:0;max-width:100%}
 #content p.math{padding:0.5em;line-height:0;text-align:center}
 #content span.math{line-height:0}
-#footer{padding-top:.3em}
+#footer{font-family:'Oswald Regular',sans-serif;padding-top:.3em}
 #footer a{text-decoration:none;color:#272828}
 #footer a:hover{text-decoration:underline}
 #footer ul{float:right;padding:0}
@@ -56,11 +56,11 @@ sub{vertical-align:baseline;position:relative;top:0.4em}
 .prettylist li{display:block;padding:.5em 0;column-break-inside:avoid;-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;overflow:hidden}
 .prettylist li a{margin-left:.2em;color:#272828;text-decoration:none}
 .prettylist li a:hover{text-decoration:underline}
-.prettylist li em{font-style:normal;font-size:1.4em;color:#F80}
-.prettylist li span {display:block;line-height:1.75em;text-align:justify}
-.prettylist li span em{font-style:italic;color:#272828;font-size:1em}
+.prettylist li span.title{font-family:'Oswald Regular',sans-serif;font-weight:normal}
+.prettylist li span.arrow{font-family:'Oswald Regular',sans-serif;font-style:normal;font-size:1.4em;color:#F80}
+.prettylist li span.text{display:block;line-height:1.75em;text-align:justify}
 .menuhead{border-bottom:0.1em solid #e3e8e8;overflow:hidden;padding:0;margin-top:0.8em}
-.menuhead h3{float:left;padding:0.4em 0 0 0;margin:0 !important;border:none !important}
+.menuhead h3{float:left;font-family:'Oswald Regular',sans-serif;padding:0.4em 0 0 0;margin:0 !important;border:none !important}
 .menuhead ul{float:right;padding:0;font-size:1.1em}
 @media screen and (max-width:46em){
 	#content .article h2 a{max-width:90%}

@@ -24,12 +24,13 @@
 <xsl:template match="branch/entry">
 	<div class="article">
 		<h2>
-			<xsl:text>» </xsl:text>
+			<span class="arrow">
+				<xsl:text>» </xsl:text>
+			</span>
 			<a href="{@handle}">
 				<xsl:value-of select="payload/title"/>
 			</a>
 		</h2>
-		<p class="info"/>
 
 		<xsl:apply-templates select="payload/content/node()" mode="xhtml"/>
 	</div>

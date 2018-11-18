@@ -21,12 +21,13 @@
 <xsl:template match="leaf/entry" mode="page">
 	<div class="article">
 		<h2>
-			<xsl:text>» </xsl:text>
+			<span class="arrow">
+				<xsl:text>» </xsl:text>
+			</span>
 			<a href="{@handle}">
 				<xsl:value-of select="title"/>
 			</a>
 		</h2>
-		<p class="info"/>
 
 		<xsl:apply-templates select="content/node()" mode="xhtml"/>
 	</div>

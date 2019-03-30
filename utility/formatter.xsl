@@ -101,7 +101,7 @@
 		<xsl:when test="contains(@class, 'display')">
 			<p class="math">
 				<xsl:call-template name="math_highlighter">
-					<xsl:with-param name="source" select="text()"/>
+					<xsl:with-param name="source" select="substring(text(),3,string-length(text())-4)"/>
 					<xsl:with-param name="arguments">
 						<xsl:text>--display-mode</xsl:text>
 					</xsl:with-param>
@@ -111,7 +111,7 @@
 		<xsl:otherwise>
 			<span class="math">
 				<xsl:call-template name="math_highlighter">
-					<xsl:with-param name="source" select="text()"/>
+					<xsl:with-param name="source" select="substring(text(),3,string-length(text())-4)"/>
 				</xsl:call-template>
 			</span>
 		</xsl:otherwise>
